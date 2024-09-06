@@ -2,6 +2,7 @@ import axios from "axios";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HomePage from "./HomePage.jsx";
+import {VersesPage} from "./VersesPage.jsx";
 import VersesListPage from "./VersesListPage.jsx";
 import VersesShowPage from "./VersesShowPage.jsx";
 // import {WordsShowPage} from "./WordsShowPage.jsx";
@@ -27,12 +28,12 @@ const router = createBrowserRouter([
       {
         path: "/verses/:chapter/:verse.json",
         element: <VersesShowPage/>,
-        loader: () => axios.get(`http://localhost:3000/verses/{chapter}/{verse}.json`).then((response) => response.data),
+        loader: ({params}) => axios.get(`http://localhost:3000/verses/${params.chapter}/${params.verse}.json`).then((response) => response.data),
       },
       {
         path: "/verses/:id.json",
         element: <VersesShowPage />,
-        loader: () => axios.get(`http://localhost:3000/verses/{id}.json`).then((response) => response.data),
+        loader: ({params}) => axios.get(`http://localhost:3000/verses/${params.id}.json`).then((response) => response.data),
       },
       // {
       //   path: "/words/:id",
@@ -43,7 +44,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+  <div> <VersesPage/></div>
+  )
+  // return <RouterProvider router={router} />;
 }
 
 export default App;

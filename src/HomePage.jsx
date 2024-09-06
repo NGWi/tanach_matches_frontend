@@ -9,7 +9,7 @@ const HomePage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.get(`http://localhost:3000/${chapter}/${verse}`)
+    axios.get(`http://localhost:3000/verses/${chapter}/${verse}`)
       .then(response => {
         history.push(`/${chapter}/${verse}`);
       })

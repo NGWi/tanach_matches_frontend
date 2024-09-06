@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const VerseShowPage = () => {
   const { chapter, verse } = useParams();
   const [verseData, setVerseData] = useState({});
+  const id = useLoaderData();
+  const navigate = useNavigate();
+
+  const handleUpdate = (id )
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/${chapter}/${verse}`)
+    axios.get(`http://localhost:3000/verses/${chapter}/${verse}`)
       .then(response => {
         setVerseData(response.data);
       })
