@@ -5,7 +5,8 @@ import HomePage from "./HomePage.jsx";
 import {VersesPage} from "./VersesPage.jsx";
 import VersesIndexPage from "./VersesIndexPage.jsx";
 import VersesShowPage from "./VersesShowPage.jsx";
-// import {WordsShowPage} from "./WordsShowPage.jsx";
+import {WordsPage} from "./WordsPage.jsx";
+import WordsShowPage from "./WordsShowPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -39,10 +40,10 @@ const router = createBrowserRouter([
         element: <VersesShowPage />,
         loader: ({params}) => axios.get(`http://localhost:3000/verses/${params.id}.json`).then((response) => response.data),
       },
-      // {
-      //   path: "/words/:id",
-      //   element: <WordsShowPage />,
-      // },
+      {
+        path: "/words/:id.json",
+        element: <WordsShowPage />,
+      },
     ],
   },
 ]);
