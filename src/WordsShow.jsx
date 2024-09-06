@@ -1,10 +1,10 @@
-export function WordsShow({ word }) {
+export function WordsShow({ word, verse }) {
   return (
     <div>
       <h1>Word information</h1>
-      <p>Book: {word.verse.book}</p>
-      <p>Chapter: {word.verse.chapter}</p>
-      <p>Verse: {word.verse.verse_number}</p>
+      <p>Book: {verse.book}</p>
+      <p>Chapter: {verse.chapter}</p>
+      <p>Verse: {verse.verse_number}</p>
       <p>Word: {word.position}</p>
       <p>Text: {word.text}</p>
 

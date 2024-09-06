@@ -8,7 +8,7 @@ const WordShowPage = () => {
 
   return (
     <div>
-      <WordsShow word={word} />
+      <WordsShow word={word} verse={word.verse} />
     </div>
   );
 };

@@ -43,6 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/words/:id.json",
         element: <WordsShowPage />,
+        loader: ({params}) => axios.get(`http://localhost:3000/words/${params.id}.json`).then((response) => response.data),
       },
     ],
   },

@@ -10,7 +10,7 @@ export function WordsPage() {
   const [ currentVerse, setCurrentVerse ] = useState({});
 
   const handleIndex = () => {
-    axios.get(`http://localhost:3000/verses/${words.verse.id}.json`)
+    axios.get(`http://localhost:3000/verses/${verse.id}.json`)
       .then(response => {
         setWords(response.data);
       })
