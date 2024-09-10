@@ -1,20 +1,21 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 // import { WordsIndex } from "./WordsIndex";
-import { WordsShow } from "./WordsShow";
-import { Modal } from "./Modal";
+import { WordsShow } from "../WordsShow";
+import { Modal } from "../Modal";
 
 export function WordsPage() {
   const [words, setWords] = useState([]);
-  const [ isWordsShowing, setIsWordsShowing ] = useState(false);
-  const [ currentVerse, setCurrentVerse ] = useState({});
+  const [isWordsShowing, setIsWordsShowing] = useState(false);
+  const [currentVerse, setCurrentVerse] = useState({});
 
   const handleIndex = () => {
-    axios.get(`http://localhost:3000/verses/${verse.id}.json`)
-      .then(response => {
+    axios
+      .get(`http://localhost:3000/verses/${verse.id}.json`)
+      .then((response) => {
         setWords(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
@@ -39,5 +40,5 @@ export function WordsPage() {
         <WordsShow verse={currentVerse} />
       </Modal>
     </main>
-  )
+  );
 }
