@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import { VersesIndex } from './VersesIndex';
 
-const VersesIndexPage = () => {
+export function VersesIndexPage() {
   // const [verses, setVerses] = useState([]);
   const verses = useLoaderData();
   const navigate = useNavigate();
@@ -39,5 +39,3 @@ const VersesIndexPage = () => {
     </div>
   );
 };
-
-export default VersesIndexPage;

@@ -2,13 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { VersesShow } from './VersesShow';
+import { Modal } from './Modal';
+import { WordsShow } from './WordsShow';
+import { WordsShowPage } from './WordsShowPage';
 
-const VerseShowPage = () => {
+export function VersesShowPage() {
   // const { chapter, verse } = useParams();
   // const [verseData, setVerseData] = useState({});
   const verse = useLoaderData();
   const navigate = useNavigate();
+  const [isWordsShowing, setIsWordsShowing] = useState(false);
+  // const [currentVerse, setCurrentVerse] = useState({});
+  const [currentWord, setCurrentWord] = useState({});
 
+  const handleWordShow = (word) => {
+    setIsWordsShowing(true);
+    setCurrentWord(word);
+  };
+
+  const handleWordClose = () => {
+    setIsWordsShowing(false);
+  };
 
   // useEffect(() => {
   //   axios.get(`http://localhost:3000/verses/${chapter}/${verse}`)
@@ -33,9 +47,10 @@ const VerseShowPage = () => {
           </li>
         ))}
       </ul> */}
-      <VersesShow verse={verse} />
+      <VersesShow verse={verse} onWordShow={handleWordShow} />
+      <Modal show={isWordsShowing} onClose={handleWordClose}>
+        <WordsShow verse={verse} word={currentWord} />
+      </Modal>
     </div>
   );
 };
-
-export default VerseShowPage;

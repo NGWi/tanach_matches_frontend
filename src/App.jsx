@@ -3,10 +3,10 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HomePage from "./HomePage.jsx";
 import { VersesPage } from "./VersesPage.jsx";
-import VersesIndexPage from "./VersesIndexPage.jsx";
-import VersesShowPage from "./VersesShowPage.jsx";
+import {VersesIndexPage} from "./VersesIndexPage.jsx";
+import {VersesShowPage} from "./VersesShowPage.jsx";
 import { WordsPage } from "./notInUse/WordsPage.jsx";
-import WordsShowPage from "./WordsShowPage.jsx";
+import {WordsShowPage} from "./WordsShowPage.jsx";
 
 const router = createBrowserRouter([
   {

@@ -1,16 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
 import { WordsShow } from './WordsShow.jsx';
 
-const WordShowPage = () => {
+export function WordsShowPage ({verse, word: word_from_verse}) {
   // const { chapter, word } = useParams();
   // const [wordData, setWordData] = useState({});
-  const word = useLoaderData();
+  const word = word_from_verse || useLoaderData();
 
   return (
     <div>
-      <WordsShow word={word} verse={word.verse} />
+      <WordsShow word={word} verse={word.verse || verse} />
     </div>
   );
 };
-
-export default WordShowPage;
