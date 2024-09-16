@@ -17,7 +17,7 @@ export function WordsShow({ verse, word }) {
         <a href={`/words/${match.matched_word.id}`}>
           {match.matched_word.text}
         </a>
-        {match.matched_word.verse.text.substring(match.matched_word.position + match.matched_word.text.length - 1)}
+        {match.matched_word.verse.text}
       </span>
     </li>
   ))}
