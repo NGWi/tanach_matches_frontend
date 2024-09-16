@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { VersesIndex } from "./VersesIndex";
-import { VersesShow } from "./VersesShow";
-import { Modal } from "./Modal";
+import { VersesIndex } from "../VersesIndex";
+import { VersesShow } from "../VersesShow";
+import { Modal } from "../Modal";
 
 export function VersesPage() {
   const [verses, setVerses] = useState([]);

@@ -14,7 +14,7 @@ export function WordsShow({ verse, word }) {
         {console.log(word)}
         {word.matches.map( (match) => (
           <li key={match.id}>
-            <a href={`/words/${match.matched_word_id}.json`}>{match.matched_word.text}</a>
+            <a href={`/words/${match.matched_word_id}.json`}>{match.matched_word.text} ({match.matched_word.verse.text})</a>
           </li>
         ))}
       </ul>

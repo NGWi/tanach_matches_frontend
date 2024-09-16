@@ -2,7 +2,7 @@ import axios from "axios";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HomePage from "./HomePage.jsx";
-import { VersesPage } from "./VersesPage.jsx";
+// import { VersesPage } from "./VersesPage.jsx";
 import {VersesIndexPage} from "./VersesIndexPage.jsx";
 import {VersesShowPage} from "./VersesShowPage.jsx";
 import { WordsPage } from "./notInUse/WordsPage.jsx";
