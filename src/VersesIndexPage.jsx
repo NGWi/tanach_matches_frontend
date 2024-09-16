@@ -11,7 +11,7 @@ export function VersesIndexPage() {
   const navigate = useNavigate();
 
   const handleShow = (verse) => {
-    navigate(`/verses/${verse.id}.json`);
+    navigate(`/verses/${verse.id}`);
   };
 
 

@@ -8,7 +8,7 @@ export function VersesShow({ verse, onWordShow }) {
       <p>Text: 
         {verse.words.map( (word) => (
           <span key={word.id} style={{display: 'inline-block', float: 'right', textAlign: 'center'}}>
-            <a href={`/words/${word.id}.json`}> {word.text}</a>
+            <a href={`/words/${word.id}`}> {word.text}</a>
             <br />
             <button onClick={() => onWordShow(word)}>Show</button>
           </span>

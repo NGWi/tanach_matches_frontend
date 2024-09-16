@@ -23,15 +23,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <VersesIndexPage />,
-        loader: () => axios.get("http://localhost:3000/verses.json").then((response) => response.data),
+        loader: () => axios.get('http://localhost:3000/verses.json').then((response) => response.data),
       },
       {
-        path: "/verses.json",
+        path: "/verses",
         element: <VersesIndexPage />,
-        loader: () => axios.get("http://localhost:3000/verses.json").then((response) => response.data),
+        loader: () => axios.get('http://localhost:3000/verses.json').then((response) => response.data),
       },
       {
-        path: "/verses/:chapter/:verse.json",
+        path: "/verses/:chapter/:verse",
         element: <VersesShowPage />,
         loader: ({ params }) =>
           axios
@@ -39,13 +39,13 @@ const router = createBrowserRouter([
             .then((response) => response.data),
       },
       {
-        path: "/verses/:id.json",
+        path: "/verses/:id",
         element: <VersesShowPage />,
         loader: ({ params }) =>
           axios.get(`http://localhost:3000/verses/${params.id}.json`).then((response) => response.data),
       },
       {
-        path: "/words/:id.json",
+        path: "/words/:id",
         element: <WordsShowPage />,
         loader: ({ params }) =>
           axios.get(`http://localhost:3000/words/${params.id}.json`).then((response) => response.data),

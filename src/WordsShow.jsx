@@ -10,14 +10,18 @@ export function WordsShow({ verse, word }) {
       <p>Text: {word.text}</p>
 
       <h2>Matches</h2>
-      <ul>
-        {console.log(word)}
-        {word.matches.map( (match) => (
-          <li key={match.id}>
-            <a href={`/words/${match.matched_word_id}.json`}>{match.matched_word.text} ({match.matched_word.verse.text})</a>
-          </li>
-        ))}
-      </ul>
+<ul style={{ display: "grid", gridTemplateColumns: "1fr" }}>
+  {word.matches.map((match) => (
+    <li key={match.id} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <span>
+        <a href={`/words/${match.matched_word.id}`}>
+          {match.matched_word.text}
+        </a>
+        {match.matched_word.verse.text.substring(match.matched_word.position + match.matched_word.text.length - 1)}
+      </span>
+    </li>
+  ))}
+</ul>
     </div>
   );
 }
