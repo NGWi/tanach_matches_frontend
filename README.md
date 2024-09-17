@@ -6,20 +6,20 @@ Tanach Matches is a web application that allows users to find matches for words 
 
 ## Features
 
-List all verses in order with their book, chapter, and verse number
-Zoom in on a specific verse to see all its words with their associated data
-Fetch a word and all its connected data
-Retrieve matches for words
-Fetch matched words and their associated verses
-Go directly to verses by chapter and verse number (in development)
+- List all verses in order with their book, chapter, and verse number
+- Zoom in on a specific verse to see all its words with their associated data
+- Fetch a word and all its connected data
+- Retrieve matches for words
+- Fetch matched words and their associated verses
+- Go directly to verses by chapter and verse number (in development)
 
 ## Installation
 
 To get started with the Tanach Matches frontend, follow these steps:
 
-Clone the repository: git clone https://github.com/NGWi/tanach_matches_frontend.git
-Install dependencies: npm install or yarn install
-Start the development server: npm start or yarn start
+1. **Clone the repository:** `git clone https://github.com/NGWi/tanach_matches_frontend.git`
+2. **Install dependencies:** `npm install` or `yarn install`
+3. **Start the development server:** `npm start` or `yarn start`
 
 ## Usage
 
