@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tanach Matches is a web application that allows users to find matches for words in the Tanach (Hebrew Bible), where the word appears at least as part of the "matched word." This frontend of the application is built using React and consumes the APIs provided by the Tanach Matches Backend I built, located at [https://github.com/NGWi/tanach_matches_backend](https://github.com/NGWi/tanach_matches_backend).
+Tanach Matches is a full-stack application that allows users to instantly find all matches for words in the Tanach (Ancient Hebrew Bible), where the word appears at least as part of the "matched word." This frontend of the application is built using React and consumes the APIs provided by the Tanach Matches Backend I built, located at [https://github.com/NGWi/tanach_matches_backend](https://github.com/NGWi/tanach_matches_backend).
 
 ## Features
 
