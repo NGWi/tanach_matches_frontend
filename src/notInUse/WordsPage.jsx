@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-// import { WordsIndex } from "./WordsIndex";
 import { WordsShow } from "../WordsShow";
 import { Modal } from "../Modal";
 
@@ -35,7 +34,6 @@ export function WordsPage() {
 
   return (
     <main>
-      {/* <WordsIndex words={words} onShow={handleShow}/> */}
       <Modal show={isWordsShowing} onClose={handleClose}>
         <WordsShow verse={currentVerse} />
       </Modal>

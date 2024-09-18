@@ -2,7 +2,6 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import { VersesIndex } from './VersesIndex';
 
 export function VersesIndexPage() {
-  // const [verses, setVerses] = useState([]);
   const verses = useLoaderData();
   const navigate = useNavigate();
 

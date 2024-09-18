@@ -1,7 +1,6 @@
 export function WordsShow({ verse, word }) {
   return (
     <div>
-      {console.log(verse)}
       <h1>Word information</h1>
       <p>Book: {verse.book}</p>
       <p>Chapter: {verse.chapter}</p>

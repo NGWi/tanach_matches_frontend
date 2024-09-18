@@ -1,10 +1,8 @@
 import { useState} from 'react';
 import { useLoaderData} from 'react-router-dom';
-// import axios from 'axios';
 import { VersesShow } from './VersesShow';
 import { Modal } from './Modal';
 import { WordsShow } from './WordsShow';
-// import { WordsShowPage } from './WordsShowPage';
 
 export function VersesShowPage() {
   const verse = useLoaderData();
