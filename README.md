@@ -19,7 +19,7 @@ A list of planned features for the project can be found at [https://github.com/N
 
 ## Installation
 
-Prerequisites: npm (or yarn) and [https://github.com/NGWi/tanach_matches_backend](Tanach Matches Backend).
+Prerequisites: npm (or yarn) and [Tanach Matches Backend](https://github.com/NGWi/tanach_matches_backend).
 
 To get started with the Tanach Matches frontend, follow these steps:
 
