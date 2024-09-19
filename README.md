@@ -1,6 +1,6 @@
 # Tanach Matches Frontend
 
-![Image description](./public/Screenshot.png)
+![Word Page](./public/Screenshot.png)
 
 ## Overview
 
@@ -19,11 +19,14 @@ A list of planned features for the project can be found at [https://github.com/N
 
 ## Installation
 
+Prerequisites: npm (or yarn) and [https://github.com/NGWi/tanach_matches_backend](Tanach Matches Backend).
+
 To get started with the Tanach Matches frontend, follow these steps:
 
 1. **Clone the repository:** `git clone https://github.com/NGWi/tanach_matches_frontend.git`
 2. **Install dependencies:** `npm install` or `yarn install`
-3. **Start the development server:** `npm start` or `yarn start`
+3. **Start the development server:** `npm run dev` or `yarn dev`
+4. **Boot up the backend:** From inside its' directory, run `rails server`
 
 ## Usage
 
@@ -33,9 +36,7 @@ The frontend provides a user-friendly interface for interacting with the data pr
 
 **View the details of a specific verse:** Click on Zoom In on the above page. Or, if you know the number of the verse, "/verses/:id", or "/verses/:chapter/:verse" (in development)
 
-**See the matches of a word with the verses they appear in:** In a verse page, click on the word, or the Show button below the word. Or if you know the number of the word in your uploaded bible file, "/words/:id".
-
-**See the details for any word:** Click on the word, whether in the verse page, in the matched words popup, or in another word's Matched list.
+**See the matches of a word with the verses they appear in, along with other word details:** Click on the word in the verse page or another word's Matched list. Or if you know the number of the word in your uploaded bible file, "/words/:id"
 
 ## Contributing
 
