@@ -2,7 +2,7 @@ export function WordsShow({ verse, word }) {
   return (
     <div>
       <h1>Word information</h1>
-      <p>Text: {.trim()}</p>
+      <p>Text: {word.text}</p>
       <p>Book: {verse.book}</p>
       <p>Chapter: {verse.chapter}</p>
       <p>Verse: {verse.verse_number}</p>
